@@ -1,10 +1,11 @@
 import "./App.css";
-import Fallback from "./page/fallback";
+// import Fallback from "./page/fallback";
+import Memo from "./page/memo";
 
 function App() {
   return (
     <div className="App">
-      <Fallback />
+      <Memo />
     </div>
   );
 }
