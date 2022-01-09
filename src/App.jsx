@@ -1,11 +1,19 @@
+import { useState } from "react";
 import "./App.css";
-// import Fallback from "./page/fallback";
-import Memo from "./page/memo";
 
 function App() {
+  const [rate, setRate] = useState(0);
+
   return (
-    <div className="App">
-      <Memo />
+    <div style={{ fontSize: 40 }} className="App">
+      {[1, 2, 3, 4, 5].map((i) => (
+        <span
+          style={{ color: i <= rate ? "red" : "" }}
+          onClick={() => setRate(i)}
+        >
+          *
+        </span>
+      ))}
     </div>
   );
 }
